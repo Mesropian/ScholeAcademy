@@ -1,13 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap');
 @tailwind base;
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
 
 .container{
   max-width: 1292px;
   margin: 0 auto;
 }
 
+html,body{
+  height: 100%;
+  line-height: 1;
+}
+
 .fontBebas{
   font-family: 'Bebas Neue', sans-serif;
+}
+.fontMontserrat{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+main{
+  flex:1 1 auto;
+}
+
+#home{
+  background-image: url(/teamBg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
