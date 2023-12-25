@@ -37,3 +37,102 @@ main{
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.biglogo{
+  position: relative;
+}
+
+.biglogo::after{
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: rgb(158,255,249);
+  background: radial-gradient(circle, rgba(158,255,249,1) 9%, rgba(0,255,242,1) 100%);
+  position: absolute;
+  right: 167px;
+  top: 260px;
+  border-radius: 50%;
+  animation: pntik 2s infinite alternate;
+}
+
+@keyframes pntik{
+  from{
+    right: 167px;
+    top: 260px;
+  }
+
+  to{
+    width: 60px;
+    height: 60px;
+    top: 180px;
+    right: -20px;
+  }
+}
+
+
+
+.anim{
+  animation: marquee 7s linear infinite ;
+}
+
+.anim>span{
+  color: #FFF;
+font-family: 'Montserrat',sans-serif;
+font-size: 32px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+text-transform: uppercase;
+}
+
+@keyframes marquee {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+
+
+.swiper {
+  width: 100%;
+  height: 55%;
+}
+
+.swiper-slide>div {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #A1CF3D;
+  width: 330px !important;
+height: 300px;
+padding: 90px 93px 90px 92px;
+color: #000;
+font-size: 100px;
+font-weight: 400;
+font-family: 'Bebas Neue', sans-serif;
+text-transform: uppercase;
+}
+
+
+.usCom::before{
+content: "";
+width: 0px;
+height: 0px;
+border-style: solid;
+border-width: 0 31px 45px 30px;
+border-color: transparent transparent #FFFFFF transparent;
+transform: rotate(90deg);
+position: absolute;
+bottom: -22px;
+left: -8px;
+}
+
+.usCom{
+  position: relative;
+}

@@ -30,19 +30,19 @@ function Header() {
         <nav className="w-full">
           <ul className=" flex w-full  justify-around">
             <li className={styles.navLinks}>
-              <Link href="/ourcourses "  className={pathname == "/ourcourses" ? "text-[#00FFF2]" : ""}>our courses </Link>
+              <Link href="/ourcourses"  className={pathname == "/ourcourses" ? "text-[#00FFF2]" : ""}>our courses </Link>
             </li>
             <li className={styles.navLinks}>
-              <Link href="/aboutus "  className={pathname == "/aboutus" ? "text-[#00FFF2]" : ""}>about us </Link>
+              <Link href="/aboutus"  className={pathname == "/aboutus" ? "text-[#00FFF2]" : ""}>about us </Link>
             </li>
             <li className={styles.navLinks}>
-              <Link href="/trainers "  className={pathname == "/trainers" ? "text-[#00FFF2]" : ""}>Trainers </Link>
+              <Link href="/trainers"  className={pathname == "/trainers" ? "text-[#00FFF2]" : ""}>Trainers </Link>
             </li>
             <li className={styles.navLinks}>
-              <Link href="/portf "  className={pathname == "/portf" ? "text-[#00FFF2]" : ""}>portfolio </Link>
+              <Link href="/portf"  className={pathname == "/portf" ? "text-[#00FFF2]" : ""}>portfolio </Link>
             </li>
             <li className={styles.navLinks}>
-              <Link href="/blog "  className={pathname == "/blog" ? "text-[#00FFF2]" : ""}>blog </Link>
+              <Link href="/blog"  className={pathname == "/blog" ? "text-[#00FFF2]" : ""}>blog </Link>
             </li>
             <li className={styles.navLinks}>
               <Link href="/register"  className={pathname == "/register" ? "text-[#00FFF2]" : ""}>registration</Link>

@@ -5,3 +5,9 @@ export interface customBtnProps {
   click? : MouseEventHandler<HTMLButtonElement>;
   title:string;
 }
+
+export interface userCommentProps{
+  fullName:string,
+  image?:string,
+  comment:string,
+}
