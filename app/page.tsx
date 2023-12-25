@@ -9,6 +9,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Link from "next/link";
 import { Accordion, AccordionItem } from "@nextui-org/react";
+import RegisterForm from "@/Components/RegisterForm";
 export default function Home() {
   return (
     <>
@@ -54,8 +55,8 @@ export default function Home() {
           </SwiperSlide>
           <SwiperSlide className=" !w-[330px] !h-[300px]">
             <div className="relative">
-              <span className=" absolute left-[-35px] bg-white"> Graphic</span>
-              <span className="absolute left-[-35px] bg-white bottom-7">
+              <span className=" absolute left-[-35px] bg-white top-[72px]"> Graphic</span>
+              <span className="absolute left-[-35px] bg-white bottom-5">
                 design
               </span>
             </div>
@@ -69,22 +70,22 @@ export default function Home() {
           </SwiperSlide>
           <SwiperSlide className="!mr-[144px]  !w-[330px] !h-[300px]">
             <div className=" relative">
-              <p className=" absolute left-0">Project</p>
-              <p className=" absolute left-0 bottom-4 bg-white">Managment</p>
+              <p className=" absolute left-6">Project</p>
+              <p className=" absolute left-6 bottom-4 bg-white">Managment</p>
             </div>
           </SwiperSlide>
           <SwiperSlide className=" !mr-[193px]  !w-[330px] !h-[300px]">
             <div className=" relative">
-              <p className=" absolute left-0 whitespace-nowrap bg-white">
+              <p className=" absolute left-6 whitespace-nowrap bg-white">
                 Mobile App
               </p>
-              <p className=" absolute left-0 bottom-4 bg-white">Development</p>
+              <p className=" absolute left-6 bottom-4 bg-white">Development</p>
             </div>
           </SwiperSlide>
           <SwiperSlide className="!mr-[193px]  !w-[330px] !h-[300px]">
             <div className=" relative">
-              <p className=" absolute left-0">Web </p>
-              <p className=" absolute left-0 bottom-4 bg-white">Development</p>
+              <p className=" absolute left-6">Web </p>
+              <p className=" absolute left-6 bottom-4 bg-white">Development</p>
             </div>
           </SwiperSlide>
           <SwiperSlide className=" !w-[330px] !h-[300px]">
@@ -189,7 +190,7 @@ export default function Home() {
       <div className="bg-[#EBEBEB]">
         <section
           id="about_portf"
-          className=" flex items-start container min-h-[732px] "
+          className=" flex items-start container min-h-[732px] justify-between "
         >
           <div className=" flex flex-col  w-[324px] items-start">
             <h3 className=" text-[100px] font-normal fontBebas leading-normal mt-[208px]">
@@ -360,6 +361,9 @@ export default function Home() {
             </SwiperSlide>
           </Swiper>
         </div>
+      </section>
+      <section id="regForm" className=" bg-[#A1CF3D] py-1">
+      <RegisterForm/>
       </section>
     </>
   );

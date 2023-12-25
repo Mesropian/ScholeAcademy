@@ -5,7 +5,7 @@
 @tailwind components;
 
 .container{
-  max-width: 1292px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
