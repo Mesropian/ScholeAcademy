@@ -4,7 +4,6 @@ import { userCommentProps } from "@/Types";
 function UserComment({fullName,image,comment}:userCommentProps) {
    
 const bg = `bg-[#776888]`
-console.log(bg);
 
   return (
     <div className=' w-80 !p-0 !bg-transparent !border-none flex flex-col !text-left !items-start'>

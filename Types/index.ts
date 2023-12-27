@@ -11,3 +11,9 @@ export interface userCommentProps{
   image?:string,
   comment:string,
 }
+export interface trainerCardProps{
+  fullName:string,
+  image?:string,
+  course:string,
+  modalLink?:string
+}

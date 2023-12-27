@@ -41,7 +41,7 @@ export default function Home() {
       </section>
       <div className="container  h-[647px]  py-24 flex flex-col justify-between">
         <Swiper
-          slidesPerView={2}
+          slidesPerView={3}
           spaceBetween={90}
           pagination={{
             clickable: true,
@@ -101,7 +101,7 @@ export default function Home() {
           MORE COURSES
         </Link>
       </div>
-      <section className=" bg-black  pb-6">
+      <section className=" bg-black  py-6">
         <div className="container min-h-[963px] flex">
           <div className=" w-[35%] flex justify-between relative">
             <p className=" text-white fontMontserrat text-3xl uppercase font-normal mt-16 max-w-80">
@@ -297,7 +297,7 @@ export default function Home() {
             THEY TRUSTED US
           </h3>
           <Swiper
-            slidesPerView={2}
+            slidesPerView={3}
             spaceBetween={90}
             pagination={{
               clickable: true,

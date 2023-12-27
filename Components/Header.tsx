@@ -20,8 +20,8 @@ function Header() {
   };
 
   return (
-    <header className=" bg-black">
-      <div className="container flex  gap-32 items-center  uppercase py-2 ">
+    <header className=" bg-transparent absolute w-full top-0 z-50">
+      <div className="container flex   gap-32 items-center  uppercase py-2 ">
         <div>
           <Link href="/">
             <Image src="/logo.png" alt="Schole Logo" width={90} height={53} />

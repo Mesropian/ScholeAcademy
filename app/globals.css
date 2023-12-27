@@ -136,3 +136,28 @@ left: -8px;
 .usCom{
   position: relative;
 }
+
+.proj-item{
+  position: relative;
+}
+
+.proj-item::after{
+  content: "Project Name";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000065;
+  font-size: 50px;
+  color:#A1CF3D;
+  border: 3px solid #A1CF3D;
+  opacity: 0;
+  transition: 500ms;
+}
+
+.proj-item:hover::after{
+  opacity: 1;
+}
