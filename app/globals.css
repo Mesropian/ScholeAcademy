@@ -8,6 +8,8 @@
 .container{
   max-width: 1440px;
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 html,body{
@@ -40,7 +42,7 @@ main{
   background-image: url(/teamBg.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  /* background-position: center; */
 }
 
 .biglogo{

@@ -11,11 +11,41 @@ import Link from "next/link";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import RegisterForm from "@/Components/RegisterForm";
 export default function Home() {
+  const ourCourses = [
+    {
+      courseName: "graphic design",
+    },
+    {
+      courseName: "Smm",
+    },
+    {
+      courseName: "UI/UX",
+    },
+    {
+      courseName: "Project Managment",
+    },
+    {
+      courseName: "Mobile App Development",
+    },
+    {
+      courseName: "WEB DEVELOPMENT",
+    },
+    {
+      courseName: "Data Science / Analytics",
+    },
+    {
+      courseName: "CRM",
+    },
+    {
+      courseName: "GOOGLE ADS",
+    },
+  ];
+
   return (
     <>
       <section
         id="home"
-        className="  h-[967px] w-full flex flex-col items-center relative xl:h-auto "
+        className="  h-[967px] w-full flex flex-col items-center relative xl:h-auto  xl:bg-center"
       >
         <div className="biglogo">
           <Image src="/biglogo.png" alt="Big Logo" width={640} height={640} />
@@ -39,14 +69,14 @@ export default function Home() {
           <span>ACADEMY</span>
         </div>
       </section>
-      <div className="container  h-[647px]  py-24 flex flex-col justify-between">
+      <div className="container  h-[647px]  py-24 flex flex-col justify-between lg:h-auto">
         <Swiper
           slidesPerView={3}
           spaceBetween={90}
           pagination={{
             clickable: true,
           }}
-          className="mySwiper !h-[300px]"
+          className="mySwiper !h-[300px] lg:!hidden"
         >
           <SwiperSlide className=" !w-[330px] !h-[300px]">
             <div>
@@ -55,7 +85,10 @@ export default function Home() {
           </SwiperSlide>
           <SwiperSlide className=" !w-[330px] !h-[300px]">
             <div className="relative">
-              <span className=" absolute left-[-35px] bg-white top-[72px]"> Graphic</span>
+              <span className=" absolute left-[-35px] bg-white top-[72px]">
+                {" "}
+                Graphic
+              </span>
               <span className="absolute left-[-35px] bg-white bottom-5">
                 design
               </span>
@@ -94,27 +127,34 @@ export default function Home() {
             </div>
           </SwiperSlide>
         </Swiper>
+        <div className=" hidden lg:flex flex-col  gap-5 ">
+            {ourCourses.map((e,i)=>{
+              return <div key={i} className=" w-full flex items-center justify-center h-16 border-[2px] border-[#A1CF3D] sm:h-10 ">
+                <p className=" fontBebas text-3xl sm:text-2xl  ">{e.courseName}</p>
+              </div>
+            })}
+        </div>
         <Link
           href="/ourcourses"
-          className=" fontBebas text-5xl font-normal self-end mt-16"
+          className=" fontBebas text-5xl font-normal self-end mt-16 lg:text-4xl   lg:w-full  lg:flex lg:items-center lg:justify-center lg:h-16 lg:bg-[#A1CF3D] sm:h-10 sm:text-3xl"
         >
           MORE COURSES
         </Link>
       </div>
-      <section className=" bg-black  py-6">
-        <div className="container min-h-[963px] flex">
-          <div className=" w-[35%] flex justify-between relative">
-            <p className=" text-white fontMontserrat text-3xl uppercase font-normal mt-16 max-w-80">
+      <section className=" bg-black  py-6 ">
+        <div className="container min-h-[963px] flex lg:overflow-scroll lg:block">
+          <div className=" w-[35%] flex justify-between relative lg:mb-12">
+            <p className=" text-white fontMontserrat text-3xl uppercase font-normal mt-16 max-w-80  xl:text-2xl xl:max-w-60  ">
               It’s never too late to try something new
             </p>
-            <h3 className=" text-white fontMontserrat text-6xl -rotate-90 whitespace-nowrap absolute ml-[5rem] top-[408px] uppercase">
+            <h3 className=" text-white fontMontserrat text-6xl -rotate-90 whitespace-nowrap absolute ml-[5rem] top-[408px] uppercase 2xl:ml-12 xl:ml-9 xl:text-5xl lg:rotate-0 lg:top-0 lg:ml-0 lg:text-4xl">
               upcoming courses
             </h3>
           </div>
-          <div className=" w-[65%] flex flex-col">
+          <div className=" w-[65%] flex flex-col lg:w-full">
             <div className=" w-full flex">
-              <div className=" w-[50%] bg-[#FF58EE] pt-14 pl-11 pb-5 pr-16 flex flex-col justify-between">
-                <h4 className=" text-3xl fontMontserrat uppercase font-medium p-3 pl-5">
+              <div className=" w-[50%] bg-[#FF58EE] pt-14 pl-11 pb-5 pr-16 flex flex-col justify-between xl:pl-8 xl:pr-12">
+                <h4 className=" text-3xl fontMontserrat uppercase font-medium p-3 pl-5 xl:pl-3 xl:text-[28px]">
                   Software Quality Assurance:
                 </h4>
                 <ul className=" list-disc mt-8 fontMontserrat text-lg font-normal capitalize">
@@ -130,8 +170,8 @@ export default function Home() {
                   view course
                 </Link>
               </div>
-              <div className=" w-[50%] bg-[#00FFF2] pt-14 pl-11 pb-5 pr-16 flex flex-col justify-between">
-                <h4 className="text-3xl fontMontserrat uppercase font-medium p-3 pl-5">
+              <div className=" w-[50%] bg-[#00FFF2] pt-14 pl-11 pb-5 pr-16 flex flex-col justify-between xl:pl-8 xl:pr-12">
+                <h4 className="text-3xl fontMontserrat uppercase font-medium p-3 pl-5 xl:pl-3 xl:text-[28px]">
                   Project Management
                 </h4>
                 <ul className=" list-disc mt-8 fontMontserrat text-lg font-normal capitalize">
@@ -146,9 +186,9 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-            <div className=" w-full flex">
-              <div className=" w-[50%] bg-[#B5D4AE;] pt-14 pl-11 pb-5 pr-16 flex flex-col justify-between">
-                <h4 className=" text-3xl fontMontserrat uppercase font-medium p-3 pl-5">
+            <div className=" w-full flex ">
+              <div className=" w-[50%] bg-[#B5D4AE;] pt-14 pl-11 pb-5 pr-16 flex flex-col justify-between xl:pl-8 xl:pr-12">
+                <h4 className=" text-3xl fontMontserrat uppercase font-medium p-3 pl-5 xl:pl-3 xl:text-[28px]">
                   3D Design and Modeling
                 </h4>
                 <ul className=" list-disc mt-8 fontMontserrat text-lg font-normal capitalize">
@@ -168,8 +208,8 @@ export default function Home() {
                   view course
                 </Link>
               </div>
-              <div className=" w-[50%] bg-[#A3BACE] pt-14 pl-11 pb-5 pr-16 flex flex-col justify-between">
-                <h4 className="text-3xl fontMontserrat uppercase font-medium p-3 pl-5">
+              <div className=" w-[50%] bg-[#A3BACE] pt-14 pl-11 pb-5 pr-16 flex flex-col justify-between lg:pl-8 xl:pr-12">
+                <h4 className="text-3xl fontMontserrat uppercase font-medium p-3 pl-5 xl:pl-3 xl:text-[28px]">
                   Web Development Fundamentals
                 </h4>
                 <ul className=" list-disc mt-8 fontMontserrat text-lg font-normal capitalize">
@@ -190,13 +230,13 @@ export default function Home() {
       <div className="bg-[#EBEBEB]">
         <section
           id="about_portf"
-          className=" flex items-start container min-h-[732px] justify-between "
+          className=" flex items-start container  justify-between lg:flex-col lg:items-center "
         >
-          <div className=" flex flex-col  w-[324px] items-start">
-            <h3 className=" text-[100px] font-normal fontBebas leading-normal mt-[208px]">
+          <div className=" flex flex-col  w-[30%] items-start lg:w-[70%]">
+            <h3 className=" text-[100px] font-normal fontBebas leading-normal mt-[208px] xl:text-[70px] lg:mt-0 sm:hidden">
               about us
             </h3>
-            <p className=" text-lg capitalize font-normal leading-normal fontMontserrat mb-32">
+            <p className=" text-lg capitalize font-normal leading-normal fontMontserrat mb-32 xl:text-[16px] lg:mb-12 sm:hidden">
               A remarkable about page is genuine, approachable, and
               distinguished. Visitors should get a glimpse into what working
               with you might be like. You can include personal interests,
@@ -204,28 +244,34 @@ export default function Home() {
             </p>
             <Link
               href="#"
-              className=" font-normal text-xl capitalize fontMontserrat py-2 px-9 border border-black mb-14 "
+              className=" font-normal text-xl capitalize fontMontserrat py-2 px-9 border border-black mb-14  sm:hidden"
             >
               more
             </Link>
+            <Link href="" className=" hidden fontBebas underline text-2xl  mt-8 uppercase text-center w-full sm:block ">
+              about us
+            </Link>
           </div>
-          <div className=" self-end">
+          <div className=" self-end lg:order-1 lg:self-center">
             <Image src="/ab_port.png" alt="team" width={622} height={645} />
           </div>
-          <div className=" flex flex-col  w-[324px] items-start  mt-[208px] ml-4">
-            <h3 className=" text-[100px] font-normal fontBebas leading-normal ">
+          <div className=" flex flex-col  w-[30%] items-start  mt-[208px] ml-4 lg:w-[70%] lg:mt-0 lg:ml-0 ">
+            <h3 className=" text-[100px] font-normal fontBebas leading-normal xl:text-[70px]  sm:hidden">
               PORTFOLIO
             </h3>
-            <p className=" text-lg capitalize font-normal leading-normal fontMontserrat mb-32">
+            <p className=" text-lg capitalize font-normal leading-normal fontMontserrat mb-32 xl:text-[16px] lg:mb-12 sm:hidden">
               Discover innovation through our lens. Crafting digital experiences
               that resonate, our portfolio showcases a harmonious blend of
               cutting-edge technology and inspired design
             </p>
             <Link
               href="#"
-              className=" font-normal text-xl capitalize fontMontserrat py-2 px-9 border border-black self-end mt-14"
+              className=" font-normal text-xl capitalize fontMontserrat py-2 px-9 border border-black self-end mt-14 lg:self-start sm:hidden" 
             >
               more
+            </Link>
+            <Link href="" className=" hidden fontBebas underline text-2xl  my-8 uppercase text-center w-full sm:block ">
+              portfolio
             </Link>
           </div>
         </section>
@@ -363,7 +409,7 @@ export default function Home() {
         </div>
       </section>
       <section id="regForm" className=" bg-[#A1CF3D] py-1">
-      <RegisterForm/>
+        <RegisterForm />
       </section>
     </>
   );
