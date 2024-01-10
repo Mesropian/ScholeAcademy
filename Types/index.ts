@@ -17,3 +17,8 @@ export interface trainerCardProps{
   course:string,
   modalLink?:string
 }
+export interface courseProps{
+  courseName:string,
+  online?:boolean,
+  offline?:boolean
+}
