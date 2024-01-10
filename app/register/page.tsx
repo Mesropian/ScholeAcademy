@@ -5,8 +5,8 @@ function page() {
   return (
     <div className=" ">
       <div className=" w-full h-[70px] bg-[#292929]"></div>
-      <section className=" w-full bg-[#D9D9D9] h-[100vh] ">
-        <div className="container h-full relative flex justify-center">
+      <section className=" w-full bg-[#D9D9D9] h-[1100px] ">
+        <div className=" container h-full relative flex justify-center  overflow-hidden">
           <Image
             src="/biglogo.png"
             alt="Big Logo"
@@ -78,16 +78,15 @@ function page() {
               </div>
             </div>
           </form>
-        </div>
-        <div className="container">
+        <div className=" h-[600px] absolute bottom-0  -right-52  ">
 
-          <div className="  w-[600px] absolute  -right-60  self-end ">
+          <div className="  w-[600px]  ">
             <Image
               src="/reg_ball.png"
               alt="Big Logo"
               width={613}
               height={520}
-              className=" absolute z-20 "
+              className=" absolute z-20  right-80 top-24 "
               />
             <Image
               src="/ab_port.png"
@@ -98,6 +97,7 @@ function page() {
               />
               </div>
           </div>
+        </div>
       </section>
     </div>
   );

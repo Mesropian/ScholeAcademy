@@ -40,6 +40,7 @@ main{
   background-image: url(/teamBg.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .biglogo{

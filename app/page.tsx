@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <section
         id="home"
-        className="  h-[967px] w-full flex flex-col items-center relative "
+        className="  h-[967px] w-full flex flex-col items-center relative xl:h-auto "
       >
         <div className="biglogo">
           <Image src="/biglogo.png" alt="Big Logo" width={640} height={640} />
