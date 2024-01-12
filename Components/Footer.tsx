@@ -7,13 +7,13 @@ function Footer() {
   const pathname = usePathname();
   return (
     <footer className=" bg-[#292929] py-7">
-      <div className="container flex justify-between">
+      <div className="container flex justify-between sm:flex-row-reverse">
         <div>
           <Link href="/">
             <Image src="/logo.png" alt="Schole Logo" width={95} height={55} />
           </Link>
         </div>
-        <ul>
+        <ul className="sm:hidden">
           <li className=" fontMontserrat  text-xl text-white  font-medium lowercase mb-2 ">
             <Link
               href="/ourcourses "
@@ -44,13 +44,13 @@ function Footer() {
         </ul>
         <div>
           <ul>
-            <li className=" fontMontserrat  text-xl text-white  font-normal  capitalize ">
+            <li className=" fontMontserrat  text-xl text-white  font-normal  capitalize sm:text-lg ">
               Example 80, 0028 Yerevan
             </li>
-            <li className=" fontMontserrat  text-xl text-white  font-normal  capitalize mt-2 ">
+            <li className=" fontMontserrat  text-xl text-white  font-normal  capitalize mt-2 sm:text-lg">
               Armenia <span className=" underline"> +374-44-55-55-22 </span>
             </li>
-            <li className=" fontMontserrat  text-xl text-white  font-normal  capitalize flex justify-end items-center gap-4 mt-4">
+            <li className=" fontMontserrat  text-xl text-white  font-normal  capitalize flex justify-end items-center gap-4 mt-4 sm:justify-start">
               <Link href="">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

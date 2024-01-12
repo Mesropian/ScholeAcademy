@@ -42,7 +42,6 @@ main{
   background-image: url(/teamBg.png);
   background-size: cover;
   background-repeat: no-repeat;
-  /* background-position: center; */
 }
 
 .biglogo{
@@ -59,10 +58,10 @@ main{
   right: 167px;
   top: 260px;
   border-radius: 50%;
-  animation: pntik 2s infinite alternate;
+  animation: scball 2s infinite alternate;
 }
 
-@keyframes pntik{
+@keyframes scball{
   from{
     right: 167px;
     top: 260px;
