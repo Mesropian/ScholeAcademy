@@ -2,7 +2,20 @@
 import React from 'react'
 import Image from 'next/image'
 import TrainerCard from '@/Components/TrainerCard';
+
+
+
 function page() {
+
+  const trainers = [
+    {id:1,fullName:'Alan Dalan',image_path:'/trainer1.png',course:'Graphic Design'},
+    {id:2,fullName:'Alan Dalanuhi',image_path:'/trainer2.png',course:'crm'},
+    {id:3,fullName:'Jones Smith',image_path:'/trainer3.png',course:'Project Managment'},
+    {id:4,fullName:'Oliver Bodman',image_path:'/trainer4.png',course:'Web Development'},
+    {id:5,fullName:'Alan Dalanuhi',image_path:'/trainer2.png',course:'crm'},
+    {id:6,fullName:'Oliver Bodman',image_path:'/trainer6.png',course:'UI/UX Design'},
+  ]
+
   return (
     <div>
       <section
@@ -29,12 +42,9 @@ function page() {
        <h2 className=' text-8xl fontBebas font-normal leading-normal text-[#445AAB] text-center my-14'>OUR TRAINERS</h2>
 <div className=' mb-24'>
         <div className=' container flex flex-wrap justify-between gap-28'>
-          <TrainerCard fullName='Alan Dalan' image='/trainer1.png' course='Graphic Design'/>
-          <TrainerCard fullName='Alan Dalanuhi' image='/trainer2.png' course='crm'/>
-          <TrainerCard fullName='Jones Smith' image='/trainer3.png' course='Project Managment'/>
-          <TrainerCard fullName='Oliver Bodman' image='/trainer4.png' course='Web Development'/>
-          <TrainerCard fullName='Alan Dalanuhi' image='/trainer2.png' course='crm'/>
-          <TrainerCard fullName='Olivia Bennett' image='/trainer6.png' course='UI/UX Design'/>
+          {trainers.map((e)=>
+            <TrainerCard key={e.id} fullName={e.fullName} image={e.image_path} course={e.course} id={e.id} />
+          )}
         </div>
 </div>
     </div>

@@ -5,6 +5,31 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 function page() {
+  const swiperTextData = [
+    {
+      id:1,
+      title: "lectures",
+      text: "Our lectures are conducted by a diverse team of seasoned professionals and experts in their respective fields. Each instructor brings a wealth of real-world experience",
+    },
+    {
+      id:2,
+      title: "Seminars",
+      text: " Our lectures are conducted by a diverse team of seasoned professionals and experts in their respective fields. Each instructor brings a wealth of real-world experience.",
+    },
+    {
+      id:3,
+      title: "Certificate",
+      text: " Our lectures are conducted by a diverse team of seasoned professionals and experts in their respective fields. Each instructor brings a wealth of real-world experience.",
+      
+    },
+    {
+      id:4,
+      title: "Final Project",
+      text: " Our lectures are conducted by a diverse team of seasoned professionals and experts in their respective fields. Each instructor brings a wealth of real-world experience.",
+    },
+  ];
+  // let titleStyles = " !w-[365px] !h-[260px] !bg-[#292929] py-4 px-6 border border-[#00FFF2]"
+  // let textStyles = "fontMontserrat text-xl font-medium leading-normal text-white"
   return (
     <div className=" bg-[#292929] w-full h-full">
       <div className=" border-b border-white ">
@@ -70,46 +95,20 @@ function page() {
           }}
           className="mySwiper !h-[365px]"
         >
-          <SwiperSlide className=" !w-[365px] !h-[260px] !bg-[#292929] py-4 px-6 border border-[#00FFF2]">
+
+          {swiperTextData.map(e=>{
+  return  <SwiperSlide key={e.id} className=" !w-[365px] !h-[260px] !bg-[#292929] py-4 px-6 border border-[#00FFF2]">
             <h6 className=" text-[#00FFF2] capitalize fontMontserrat text-3xl font-normal leading-normal">
-              lectures
+              {e.title}
             </h6>
             <p className=" fontMontserrat text-xl font-medium leading-normal text-white ">
-              Our lectures are conducted by a diverse team of seasoned
-              professionals and experts in their respective fields. Each
-              instructor brings a wealth of real-world experience.
+             {e.text}
             </p>
           </SwiperSlide>
-          <SwiperSlide className=" !w-[365px] !h-[260px] !bg-[#292929] py-4 px-6 border border-[#00FFF2]">
-            <h6 className=" text-[#00FFF2] capitalize fontMontserrat text-3xl font-normal leading-normal">
-            Seminars
-            </h6>
-            <p className=" fontMontserrat text-xl font-medium leading-normal text-white ">
-              Our lectures are conducted by a diverse team of seasoned
-              professionals and experts in their respective fields. Each
-              instructor brings a wealth of real-world experience.
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className=" !w-[365px] !h-[260px] !bg-[#292929] py-4 px-6 border border-[#00FFF2]">
-            <h6 className=" text-[#00FFF2] capitalize fontMontserrat text-3xl font-normal leading-normal">
-            Certificate
-            </h6>
-            <p className=" fontMontserrat text-xl font-medium leading-normal text-white ">
-              Our lectures are conducted by a diverse team of seasoned
-              professionals and experts in their respective fields. Each
-              instructor brings a wealth of real-world experience.
-            </p>
-          </SwiperSlide>
-          <SwiperSlide className=" !w-[365px] !h-[260px] !bg-[#292929] py-4 px-6 border border-[#00FFF2]">
-            <h6 className=" text-[#00FFF2] capitalize fontMontserrat text-3xl font-normal leading-normal">
-            Final Project
-            </h6>
-            <p className=" fontMontserrat text-xl font-medium leading-normal text-white ">
-              Our lectures are conducted by a diverse team of seasoned
-              professionals and experts in their respective fields. Each
-              instructor brings a wealth of real-world experience.
-            </p>
-          </SwiperSlide>
+
+          })}
+
+       
         </Swiper>
       </div>
     </div>

@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 function page() {
   return (
-    <div className=" ">
+    <div >
       <div className=" w-full h-[70px] bg-[#292929]"></div>
       <section className=" w-full bg-[#D9D9D9] h-[1100px] ">
         <div className=" container h-full relative flex justify-center  overflow-hidden">
@@ -12,13 +12,13 @@ function page() {
             alt="Big Logo"
             width={540}
             height={540}
-            className=" absolute  -left-8 -top-10"
+            className=" absolute  -left-8 -top-10 "
           />
           <form
             action=""
-            className=" w-[671px] pt-12 pl-4  pr-20  absolute top-[60px]"
+            className=" w-[671px] pt-12 pl-4  pr-20  absolute top-[60px] "
           >
-            <h2 className=" text-8xl fontBebas font-normal leading-normal text-[#445AAB]  my-14 text-left">
+            <h2 className=" text-8xl fontBebas font-normal leading-normal text-[#445AAB]  my-14 text-left ">
               register now
             </h2>
             <h6 className=" capitalize fontMontserrat text-3xl font-normal leading-normal mb-12">

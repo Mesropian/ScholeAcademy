@@ -1,11 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Course from "@/Components/Course";
 import RegisterForm from "@/Components/RegisterForm";
 
 function page() {
+  const [openFaq, setOpenFaq] = useState(false);
+  const handleOpenFaq = (): void => {
+    setOpenFaq(!openFaq);
+  };
   const ourCourses = [
     {
       courseName: "graphic design",
@@ -62,19 +66,19 @@ function page() {
       </section>
       <div className=" bg-[#00FFF2] py-4">
         <div className="container text-center">
-          <h3 className=" fontBebas text-5xl leading-normal font-normal">
+          <h3 className=" fontBebas text-5xl leading-normal font-normal sm:text-2xl">
             Join Midway
           </h3>
           <Link
             href="/"
-            className=" fontMontserrat text-xl font-normal capitalize underline"
+            className=" fontMontserrat text-xl font-normal capitalize underline sm:text-base"
           >
             How it works
           </Link>
         </div>
       </div>
-      <section id="courses" className=" pt-24">
-        <div className="container flex flex-wrap justify-between gap-[100px]">
+      <section id="courses" className=" pt-24 sm:pt-6">
+        <div className="container flex flex-wrap justify-between gap-[100px] sm:overflow-scroll sm:flex-nowrap sm:gap-[40px]">
           {ourCourses.map((e, i) => {
             return (
               <Course
@@ -86,33 +90,89 @@ function page() {
             );
           })}
         </div>
-        <div className=" container text-center pt-20 pb-14">
-          <Link href="/" className="fontBebas text-5xl font-normal">
+        <div className=" container text-center pt-20 pb-14  sm:hidden">
+          <Link href="/" className="fontBebas text-5xl font-normal sm:hidden">
             more courses
           </Link>
         </div>
       </section>
-      <section className=" bg-[#445AAB] w-full">
-        <div className="container pt-16 pb-11" >
-          <h3 className=" text-8xl  text-white fontBebas font-normal leading-normal uppercase text-center">
+      <section className=" bg-[#445AAB] w-full sm:mt-9">
+        <div className="container pt-16 pb-11 sm:pt-2 sm:pb-2">
+          <h3
+            className=" text-8xl  text-white fontBebas font-normal leading-normal uppercase text-center sm:text-3xl sm:relative"
+            onClick={handleOpenFaq}
+          >
             join MIdway
+            <span
+              className={`hidden sm:inline-block absolute duration-500 right-4 top-2 ${
+                openFaq ? "rotate-90" : "rotate-0"
+              } `}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <path
+                  d="M17.9167 7.12467L16.6251 5.83301L10.0001 12.458L3.37508 5.83301L2.08341 7.12467L10.0001 14.9997L17.9167 7.12467Z"
+                  fill="white"
+                />
+              </svg>
+            </span>
           </h3>
-          <ul className=" flex flex-col gap-7">
-            <li className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal]">Skip Introductory Content: If you're familiar with the basics, you can bypass the introductory material and dive right into the more advanced aspects of the course</li>
-            <li className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal]">Save Time: Joining midway allows you to save time by focusing on the content that truly challenges and engages you</li>
-            <li className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal]">How it’s work</li>
-            <li className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal]">Assessment: Before joining a course midway, we conduct a brief assessment to understand your existing knowledge. This helps us recommend the most suitable starting point for you.</li>
-            <li className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal]">Consultation: Our team is here to guide you. If you're unsure about joining midway, schedule a consultation to discuss your goals and determine the best entry point for your skill level.</li>
+          <ul
+            className={`flex flex-col gap-7 duration-1000 sm:gap-2 sm:h-0 sm:!overflow-hidden ${
+              openFaq ? "sm:!h-auto" : "sm:!h-0"
+            }`}
+          >
+            <li className=" fontMontserrat  sm:pt-5  text-white text-xl capitalize font-normal leading-[normal] sm:text-xs">
+              Skip Introductory Content: If you're familiar with the basics, you
+              can bypass the introductory material and dive right into the more
+              advanced aspects of the course
+            </li>
+            <li className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal] sm:text-xs">
+              Save Time: Joining midway allows you to save time by focusing on
+              the content that truly challenges and engages you
+            </li>
+            <li className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal] sm:text-xs">
+              How it’s work
+            </li>
+            <li className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal] sm:text-xs">
+              Assessment: Before joining a course midway, we conduct a brief
+              assessment to understand your existing knowledge. This helps us
+              recommend the most suitable starting point for you.
+            </li>
+            <li className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal] sm:text-xs">
+              Consultation: Our team is here to guide you. If you're unsure
+              about joining midway, schedule a consultation to discuss your
+              goals and determine the best entry point for your skill level.
+            </li>
           </ul>
-          <div className=" text-center">
-                <h5 className="uppercase fontBebas text-5xl font-normal leading-normal text-white mt-12">get started</h5>
-                <p className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal] mb-9 mt-7">Ready to take your learning journey to the next level? Join a course midway and elevate your skills</p>
-                <Link href='' className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal] underline">Contact Us</Link>
+          <div
+            className={` text-center duration-1000 sm:h-0 sm:overflow-hidden ${
+              openFaq ? "sm:!h-auto" : "sm:!h-0"
+            }`}
+          >
+            <h5 className="uppercase fontBebas text-5xl font-normal leading-normal text-white mt-12 sm:text-3xl">
+              get started
+            </h5>
+            <p className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal] mb-9 mt-7 sm:text-base">
+              Ready to take your learning journey to the next level? Join a
+              course midway and elevate your skills
+            </p>
+            <Link
+              href=""
+              className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal] underline"
+            >
+              Contact Us
+            </Link>
           </div>
         </div>
       </section>
       <section id="regForm" className=" bg-[#A1CF3D] py-1">
-      <RegisterForm/>
+        <RegisterForm />
       </section>
     </div>
   );

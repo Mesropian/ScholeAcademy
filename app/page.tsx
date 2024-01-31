@@ -1,5 +1,4 @@
 "use client";
-
 import UserComment from "@/Components/UserComment";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -43,7 +42,95 @@ export default function Home() {
       courseName: "GOOGLE ADS",
     },
   ];
-
+  const faqData = [
+    {
+      id: "1",
+      title: "Why choose trainings suggested by Schole centre?",
+      reply: "Why choose trainings suggested by Schole centre?",
+    },
+    {
+      id: 2,
+      title: "Are 2 months enough to be a Graphic or UX/UI designer?",
+      reply: "Are 2 months enough to be a Graphic or UX/UI designer?",
+    },
+    {
+      id: 3,
+      title:
+        "If I already have knowledge with the topics, could I upgrade my skills?",
+      reply:
+        "If I already have knowledge with the topics, could I upgrade my skills?",
+    },
+    {
+      id: 4,
+      title: "Do you provide computers for trainings?",
+      reply: "Do you provide computers for trainings?",
+    },
+    {
+      id: 5,
+      title:
+        "Is the knowledge of professional programs mandatory to attend the training course?",
+      reply:
+        "Is the knowledge of professional programs mandatory to attend the training course?",
+    },
+    {
+      id: 6,
+      title: "How can I pay for the training?",
+      reply: "How can I pay for the training?",
+    },
+  ];
+  const usersComment = [
+    {
+      id: 1,
+      fullName: "Ricardo Kaka",
+      comment:
+        "“ Academy is the forge where my tech dreams were molded into reality. The curriculum is a masterpiece, and the instructors are true artisans, shaping us into coding wizards. Five stars for turning aspirations into algorithms “",
+      image: "/921110.png",
+    },
+    {
+      id: 2,
+      fullName: "Ethan Blackwell",
+      comment:
+        "“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to code “",
+      image: "/921110.png",
+    },
+    {
+      id: 3,
+      fullName: "Serena Hawthorne",
+      comment:
+        "“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to code “",
+      image: "/921110.png",
+    },
+    {
+      id: 4,
+      fullName: "Lucas Mercer",
+      comment:
+        "“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to code “",
+      image: "/921110.png",
+    },
+    {
+      id: 5,
+      fullName: "John Smith",
+      comment:
+        "“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to code “",
+      image: "/921110.png",
+    },
+    {
+      id: 6,
+      fullName: "Dean Winchester",
+      comment:
+        "“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to code “",
+      image: "/921110.png",
+    },
+    {
+      id: 7,
+      fullName: "Sam Winchester",
+      comment:
+        "“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to code “",
+      image: "/921110.png",
+    },
+  ];
+  const faqStyles =
+    "fontMontserrat capitalize font-normal text-lg leading-normal";
   return (
     <>
       <section
@@ -293,13 +380,17 @@ export default function Home() {
         </section>
       </div>
       <section id="faq">
-        <div className="container py-24 border  ">
+        <div className="container py-24   ">
           <h3
             className=" fontBebas font-normal text-5xl leading-normal sm:text-2xl sm:text-center sm:border sm:border-[black] sm:relative "
             onClick={handleOpenFaq}
           >
             FREQUENTLY ASKED QUESTION
-            <span className={`hidden sm:inline-block absolute duration-500 right-4 top-2 ${openFaq?'rotate-90':'rotate-0'} `}>
+            <span
+              className={`hidden sm:inline-block absolute duration-500 right-4 top-2 ${
+                openFaq ? "rotate-90" : "rotate-0"
+              } `}
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -320,56 +411,11 @@ export default function Home() {
             }`}
           >
             <Accordion selectionMode="multiple">
-              <AccordionItem
-                key="1"
-                aria-label="Accordion 1"
-                title="  Why choose trainings suggested by Schole centre?"
-                className="fontMontserrat capitalize font-normal text-lg leading-normal  "
-              >
-                Why choose trainings suggested by Schole centre?
-              </AccordionItem>
-              <AccordionItem
-                key="2"
-                aria-label="Accordion 2"
-                title="  Are 2 months enough to be a Graphic or UX/UI designer?"
-                className="fontMontserrat capitalize font-normal text-lg leading-normal  "
-              >
-                Are 2 months enough to be a Graphic or UX/UI designer?
-              </AccordionItem>
-              <AccordionItem
-                key="3"
-                aria-label="Accordion 3"
-                title=" If I already have knowledge with the topics, could I upgrade my skills?"
-                className="fontMontserrat capitalize font-normal text-lg leading-normal  "
-              >
-                If I already have knowledge with the topics, could I upgrade my
-                skills?
-              </AccordionItem>
-              <AccordionItem
-                key="4"
-                aria-label="Accordion 4"
-                title="   Do you provide computers for trainings?"
-                className="fontMontserrat capitalize font-normal text-lg leading-normal  "
-              >
-                Do you provide computers for trainings?
-              </AccordionItem>
-              <AccordionItem
-                key="5"
-                aria-label="Accordion 5"
-                title=" Is the knowledge of professional programs mandatory to attend the training course?"
-                className="fontMontserrat capitalize font-normal text-lg leading-normal  "
-              >
-                Is the knowledge of professional programs mandatory to attend
-                the training course?
-              </AccordionItem>
-              <AccordionItem
-                key="6"
-                aria-label="Accordion 6"
-                title="  How can I pay for the training?"
-                className="fontMontserrat capitalize font-normal text-lg leading-normal  "
-              >
-                How can I pay for the training?
-              </AccordionItem>
+              {faqData.map((e) => (
+                <AccordionItem key={e.id} title={e.title} className={faqStyles}>
+                  {e.reply}
+                </AccordionItem>
+              ))}
             </Accordion>
           </div>
         </div>
@@ -387,61 +433,15 @@ export default function Home() {
             }}
             className="mySwiper !h-[376px]"
           >
-            <SwiperSlide className=" !w-[330px] !h-[300px]">
-              <UserComment
-                fullName="Ricardo Kaka"
-                comment="“ Academy is the forge where my tech dreams were molded into reality. The curriculum is a masterpiece, and the instructors are true artisans, shaping us into coding wizards. Five stars for turning aspirations into algorithms “"
-                image="https://cdn-icons-png.flaticon.com/512/921/921110.png"
-              />
-            </SwiperSlide>
-            <SwiperSlide className=" !w-[330px] !h-[300px]">
-              <UserComment
-                fullName="Ethan Blackwell"
-                comment="“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to 
-                code “"
-                image="https://cdn-icons-png.flaticon.com/512/921/921110.png"
-              />
-            </SwiperSlide>
-            <SwiperSlide className=" !w-[330px] !h-[300px]">
-              <UserComment
-                fullName="Serena Hawthorne"
-                comment="“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to 
-                code “"
-                image="https://cdn-icons-png.flaticon.com/512/921/921110.png"
-              />
-            </SwiperSlide>
-            <SwiperSlide className=" !w-[330px] !h-[300px]">
-              <UserComment
-                fullName="Lucas Mercer"
-                comment="“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to 
-                code “"
-                image="https://cdn-icons-png.flaticon.com/512/921/921110.png"
-              />
-            </SwiperSlide>
-            <SwiperSlide className=" !w-[330px] !h-[300px]">
-              <UserComment
-                fullName="Ալիսա"
-                comment="“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to 
-                code “"
-                image="https://cdn-icons-png.flaticon.com/512/921/921110.png"
-              />
-            </SwiperSlide>
-            <SwiperSlide className=" !w-[330px] !h-[300px]">
-              <UserComment
-                fullName="Վասիլիս"
-                comment="“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to 
-                code “"
-                image="https://cdn-icons-png.flaticon.com/512/921/921110.png"
-              />
-            </SwiperSlide>
-            <SwiperSlide className=" !w-[330px] !h-[300px]">
-              <UserComment
-                fullName="Վինիսիսւս"
-                comment="“ Schole isn't just a school; it's a launchpad for the next generation of innovators. The instructors are bridge builders, connecting theory with real-world applications. It's not about learning to 
-                code “"
-                image="https://cdn-icons-png.flaticon.com/512/921/921110.png"
-              />
-            </SwiperSlide>
+            {usersComment.map((e) => {
+            return  <SwiperSlide key={e.id} className=" !w-[330px] !h-[300px]">
+                <UserComment
+                  fullName={e.fullName}
+                  comment={e.comment}
+                  image={e.image}
+                />
+              </SwiperSlide>;
+            })}
           </Swiper>
         </div>
       </section>

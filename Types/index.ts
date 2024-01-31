@@ -12,10 +12,10 @@ export interface userCommentProps{
   comment:string,
 }
 export interface trainerCardProps{
+  id:number,
   fullName:string,
   image?:string,
   course:string,
-  modalLink?:string
 }
 export interface courseProps{
   courseName:string,

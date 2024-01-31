@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-function TrainerCard({fullName,image='',course,modalLink='/'}:trainerCardProps) {
+function TrainerCard({fullName,image='',course,id}:trainerCardProps) {
   return (
     <div className=' w-96 flex flex-col '>
         <div>
@@ -13,7 +13,7 @@ function TrainerCard({fullName,image='',course,modalLink='/'}:trainerCardProps) 
         <h4 className=' fontMontserrat  text-3xl leading-normal capitalize font-normal text-white'>{fullName}</h4>
         <p className='fontMontserrat  text-xl leading-normal capitalize font-normal text-white'>{course}</p>
       </div>
-    <Link href={modalLink} className=' self-start mt-4
+    <Link href={`/trainers/trainer/${id}`} className=' self-start mt-4
       border border-black p-3 fontMontserrat uppercase' > View Course</Link>
     </div>
   )
