@@ -28,8 +28,7 @@ function page() {
       text: " Our lectures are conducted by a diverse team of seasoned professionals and experts in their respective fields. Each instructor brings a wealth of real-world experience.",
     },
   ];
-  // let titleStyles = " !w-[365px] !h-[260px] !bg-[#292929] py-4 px-6 border border-[#00FFF2]"
-  // let textStyles = "fontMontserrat text-xl font-medium leading-normal text-white"
+
   return (
     <div className=" bg-[#292929] w-full h-full">
       <div className=" border-b border-white ">
@@ -55,17 +54,17 @@ function page() {
           </p>
         </div>
         <div className=" w-[520px] h-[520px] bg-[url(/logo_gr.png)] bg-cover flex items-center justify-center">
-          <Image src="/sharik.png" width={303} height={315} alt="ball" />
+          <Image src={`/sharik.png`} width={303} height={315} alt="ball" />
         </div>
       </div>
       <div className=" bg-[#445AAB] py-12">
         <div className="container flex justify-between">
           <div className="  w-96">
-            <h4 className=" uppercase  text-8xl fontBebas font-normal leading-normal text-white flex gap-7">
+            <h4 className=" uppercase  text-8xl fontBebas font-normal leading-normal text-white flex gap-7 items-center">
               MIssion
-              <Image src="/arrow.svg" width={66} height={57} alt="arrow" />
+              <Image src={`/images/mission.png`} width={143} height={81} alt="mission" />
             </h4>
-            <p className="fontMontserrat text-white text-xl font-normal leading-normal">
+            <p className="fontMontserrat text-white text-xl font-normal leading-normal capitalize">
               Keep it concise and to the point. A mission statement should be
               easily understood and memorable. Make it inspirational. A
               well-crafted mission statement can motivate both employees and
@@ -73,12 +72,12 @@ function page() {
             </p>
           </div>
           <div className="  w-96">
-            <h4 className=" uppercase  text-8xl fontBebas font-normal leading-normal text-white flex gap-7">
+            <h4 className=" uppercase  text-8xl fontBebas font-normal leading-normal text-white flex gap-7 items-center">
               vison
+              <Image src={`/images/vision1.png`} width={128} height={73} alt="mission" />
             </h4>
-            <p className="fontMontserrat text-white text-xl font-normal leading-normal">
-              Keep it concise and to the point. A mission statement should be
-              easily understood and memorable.
+            <p className="fontMontserrat text-white text-xl font-normal leading-normal capitalize">
+            Keep it concise and to the point. A mission statement should be easily understood and memorable.
             </p>
           </div>
         </div>

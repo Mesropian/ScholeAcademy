@@ -324,7 +324,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <div className="bg-[#EBEBEB]">
+      <div className="group bg-[#EBEBEB] border-black hover:bg-[#EB2256] hover:text-white hover:border-white transition">
         <section
           id="about_portf"
           className=" flex items-start container  justify-between lg:flex-col lg:items-center "
@@ -341,7 +341,7 @@ export default function Home() {
             </p>
             <Link
               href="#"
-              className=" font-normal text-xl capitalize fontMontserrat py-2 px-9 border border-black mb-14  sm:hidden"
+              className=" font-normal text-xl capitalize fontMontserrat py-2 px-9 border border-black group-hover:border-white mb-14  sm:hidden"
             >
               more
             </Link>
@@ -366,7 +366,7 @@ export default function Home() {
             </p>
             <Link
               href="#"
-              className=" font-normal text-xl capitalize fontMontserrat py-2 px-9 border border-black self-end mt-14 lg:self-start sm:hidden"
+              className=" font-normal text-xl capitalize fontMontserrat py-2 px-9 border border-black group-hover:border-white self-end mt-14 lg:self-start sm:hidden"
             >
               more
             </Link>

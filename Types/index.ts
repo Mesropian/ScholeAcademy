@@ -19,6 +19,8 @@ export interface trainerCardProps{
 }
 export interface courseProps{
   courseName:string,
+  coursePath:string,
   online?:boolean,
-  offline?:boolean
+  offline?:boolean,
+  hoverColor:string
 }

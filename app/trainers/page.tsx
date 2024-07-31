@@ -27,7 +27,7 @@ function page() {
         </div>
       </section>
       <div className=' relative h-12'>
-        <div className="anim  w-[200%] h-14  flex items-center justify-center absolute top-0 gap-3 text-black">
+        <div className="anim  w-[200%] h-14  flex items-center justify-center absolute top-0 gap-3 text-black border-b-2 border-black">
           <span className=' !text-black whitespace-nowrap'>Meet our trainers</span>
           <span className=' !text-black whitespace-nowrap'>Meet our trainers</span>
           <span className=' !text-black whitespace-nowrap'>Meet our trainers</span>

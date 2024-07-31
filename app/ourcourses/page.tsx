@@ -13,44 +13,65 @@ function page() {
   const ourCourses = [
     {
       courseName: "graphic design",
+      coursePath: "design",
       offline: true,
+      hoverColor:"#EB2256"
     },
     {
       courseName: "Smm",
+      coursePath: "smm",
       offline: true,
+      hoverColor:"#A1CF3D"
     },
     {
       courseName: "UI/UX",
+      coursePath: "uiux",
       online: true,
+      hoverColor:"#1FAFD3"
     },
     {
       courseName: "Project Managment",
+      coursePath: "project-managment",
       online: true,
       offline: true,
+      hoverColor:"#445AAB"
     },
     {
       courseName: "Mobile App Development",
+      coursePath: "mob-app-development",
       offline: true,
+      hoverColor:"#A1CF3D"
     },
     {
       courseName: "WEB DEVELOPMENT",
+      coursePath: "web-development",
       online: true,
       offline: true,
+      hoverColor:"#EB2256"
     },
     {
       courseName: "Data Science / Analytics",
+      coursePath: "data-science-analytics",
       online: true,
+      hoverColor:"#1FAFD3"
     },
     {
       courseName: "CRM",
+      coursePath: "crm",
       online: true,
+      hoverColor:"#445AAB"
     },
     {
       courseName: "GOOGLE ADS",
+      coursePath: "google-ads",
       online: true,
       offline: true,
+      hoverColor:"#A1CF3D"
     },
   ];
+
+  console.log(JSON.stringify(ourCourses,null,2));
+  
 
   return (
     <div>
@@ -84,8 +105,10 @@ function page() {
               <Course
                 key={i}
                 courseName={e.courseName}
+                coursePath={e.coursePath}
                 online={e.online}
                 offline={e.offline}
+                hoverColor={e.hoverColor}
               />
             );
           })}

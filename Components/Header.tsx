@@ -46,7 +46,7 @@ function Header() {
         <div className="container flex   gap-32 items-center  uppercase py-2  lg:p-4 pr-9">
           <div>
             <Link href="/">
-              <Image src="/logo.png" alt="Schole Logo" width={90} height={53} />
+              <Image src={`/logo.png`} alt="Schole Logo" width={90} height={53} />
             </Link>
           </div>
           <nav className="w-full lg:flex justify-end">
