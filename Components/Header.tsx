@@ -42,7 +42,7 @@ function Header() {
 
   return (
     <>
-      <header className=" bg-transparent absolute w-full top-0 z-50">
+      <header className=" bg-transparent absolute w-full top-0 z-50" style={{backgroundColor:pathname=='/'||pathname=='/trainers'?"#000":'transparent'}}>
         <div className="container flex   gap-32 items-center  uppercase py-2  lg:p-4 pr-9">
           <div>
             <Link href="/">

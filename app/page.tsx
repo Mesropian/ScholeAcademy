@@ -135,11 +135,9 @@ export default function Home() {
     <>
       <section
         id="home"
-        className="  h-[967px] w-full flex flex-col items-center relative xl:h-auto  xl:bg-center sm:h-[300px] sm:bg-top"
+        className="  h-[967px] w-full flex flex-col items-center relative  mt-14  xl:bg-center sm:h-[300px] sm:bg-top"
       >
-        <div className="biglogo sm:w-[139px] sm:absolute sm:top-16 sm:after:hidden">
-          <Image src="/biglogo.png" alt="Big Logo" width={640} height={640} />
-        </div>
+
         <div className="anim  w-[200%] h-14  flex items-center justify-center absolute bottom-0 gap-3 sm:hidden">
           <span>ACADEMY</span>
           <span>ACADEMY</span>

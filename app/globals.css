@@ -41,7 +41,9 @@ main{
 #home{
   background-image: url(/teamBg.png);
   background-size: cover;
+  background-position:center ;
   background-repeat: no-repeat;
+  background-color:#f6f6f6;
 }
 
 .biglogo{

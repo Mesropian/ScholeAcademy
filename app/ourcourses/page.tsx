@@ -15,58 +15,76 @@ function page() {
       courseName: "graphic design",
       coursePath: "design",
       offline: true,
-      hoverColor:"#EB2256"
+      hoverColor:"#EB2256",
+      duration:4,
+      price:60000,
     },
     {
       courseName: "Smm",
       coursePath: "smm",
       offline: true,
-      hoverColor:"#A1CF3D"
+      hoverColor:"#A1CF3D",
+      duration:4,
+      price:60000,
     },
     {
       courseName: "UI/UX",
       coursePath: "uiux",
       online: true,
-      hoverColor:"#1FAFD3"
+      hoverColor:"#1FAFD3",
+      duration:4,
+      price:60000,
     },
     {
       courseName: "Project Managment",
       coursePath: "project-managment",
       online: true,
       offline: true,
-      hoverColor:"#445AAB"
+      hoverColor:"#445AAB",
+      duration:4,
+      price:60000,
     },
     {
       courseName: "Mobile App Development",
       coursePath: "mob-app-development",
       offline: true,
-      hoverColor:"#A1CF3D"
+      hoverColor:"#A1CF3D",
+      duration:4,
+      price:60000,
     },
     {
       courseName: "WEB DEVELOPMENT",
       coursePath: "web-development",
       online: true,
       offline: true,
-      hoverColor:"#EB2256"
+      hoverColor:"#EB2256",
+      duration:4,
+      price:60000,
     },
     {
       courseName: "Data Science / Analytics",
       coursePath: "data-science-analytics",
       online: true,
-      hoverColor:"#1FAFD3"
+      hoverColor:"#1FAFD3",
+      duration:4,
+      price:60000,
     },
     {
       courseName: "CRM",
       coursePath: "crm",
       online: true,
-      hoverColor:"#445AAB"
+      hoverColor:"#445AAB",
+      duration:4,
+      price:60000,
     },
     {
       courseName: "GOOGLE ADS",
       coursePath: "google-ads",
       online: true,
       offline: true,
-      hoverColor:"#A1CF3D"
+      hoverColor:"#A1CF3D",
+      duration:4,
+      price:60000,
     },
   ];
 
@@ -109,6 +127,8 @@ function page() {
                 online={e.online}
                 offline={e.offline}
                 hoverColor={e.hoverColor}
+                duration={e.duration}
+                price={e.price}
               />
             );
           })}

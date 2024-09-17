@@ -22,9 +22,7 @@ function page() {
         id="home"
         className="   h-[967px] w-full flex flex-col items-center relative "
       >
-        <div className="biglogo">
-          <Image src="/biglogo.png" alt="Big Logo" width={640} height={640} />
-        </div>
+  
       </section>
       <div className=' relative h-12'>
         <div className="anim  w-[200%] h-14  flex items-center justify-center absolute top-0 gap-3 text-black border-b-2 border-black">

@@ -10,7 +10,7 @@ function page() {
       <section className='w-full  bg-[#445AAB]  relative'>
         <div className=' container items-center flex flex-col'>
       <div className="biglogo mt-14">
-          <Image src="/biglogo.png" alt="Big Logo" width={640} height={640} />
+         <h2 className=' text-8xl my-14 text-[#A1CF3D] uppercase fontBebas '>portfolios</h2>
         </div>
         <div className=' flex flex-wrap justify-between gap-24'>
             <div className='proj-item fontBebas'>

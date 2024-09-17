@@ -12,7 +12,7 @@ function Course({ courseName, online, offline, hoverColor,coursePath }: coursePr
   };
   return (
     <Link
-      href={`/ourcourses/course/${coursePath}`}
+      href={`/ourcourses/${coursePath}`}
       className="w-[330px] h-[273px]  sm:h-auto"
     
     >

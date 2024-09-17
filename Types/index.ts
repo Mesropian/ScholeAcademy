@@ -22,5 +22,7 @@ export interface courseProps{
   coursePath:string,
   online?:boolean,
   offline?:boolean,
-  hoverColor:string
+  hoverColor:string,
+  duration:number,
+  price:number
 }
