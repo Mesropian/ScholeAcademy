@@ -99,12 +99,13 @@ function page({ params }: IParamsCourseDetails) {
     return <Error />;
   }
   const { coursePath } = params;
-  console.log(currentPage.split("/")[2]);
-  console.log(params);
 
   const courseData = courses.find((e) => {
     return e.coursePath == coursePath;
   });
+  
+  
+  // console.log(courseData);
 
   return (
     <div>

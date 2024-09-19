@@ -50,32 +50,7 @@ main{
   position: relative;
 }
 
-.biglogo::after{
-  content: "";
-  width: 20px;
-  height: 20px;
-  background: rgb(158,255,249);
-  background: radial-gradient(circle, rgba(158,255,249,1) 9%, rgba(0,255,242,1) 100%);
-  position: absolute;
-  right: 167px;
-  top: 260px;
-  border-radius: 50%;
-  animation: scball 2s infinite alternate;
-}
 
-@keyframes scball{
-  from{
-    right: 167px;
-    top: 260px;
-  }
-
-  to{
-    width: 60px;
-    height: 60px;
-    top: 180px;
-    right: -20px;
-  }
-}
 
 
 
