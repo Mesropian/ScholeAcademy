@@ -52,7 +52,7 @@ const trainers = [
 function page ({ params }: IParamsTrainerDetails)  {
   const { id } = params;
 
-  const trainer = trainers.find((trainer) => trainer.id === parseInt(id));
+  const trainer = trainers.find((trainer) => trainer.id == id);
 
   if (!trainer) {
     return <Error />;
