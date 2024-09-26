@@ -3,6 +3,7 @@ import type { Config } from 'tailwindcss'
 const {nextui} = require("@nextui-org/react");
 
 const config: Config = {
+  mode: 'jit',
   content: [
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
