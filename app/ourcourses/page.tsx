@@ -171,7 +171,7 @@ function page() {
             }`}
           >
             <li className=" fontMontserrat  sm:pt-5  text-white text-xl capitalize font-normal leading-[normal] sm:text-xs">
-              Skip Introductory Content: If you're familiar with the basics, you
+              Skip Introductory Content: If you&apos;re familiar with the basics, you
               can bypass the introductory material and dive right into the more
               advanced aspects of the course
             </li>
@@ -188,7 +188,7 @@ function page() {
               recommend the most suitable starting point for you.
             </li>
             <li className=" fontMontserrat text-white text-xl capitalize font-normal leading-[normal] sm:text-xs">
-              Consultation: Our team is here to guide you. If you're unsure
+              Consultation: Our team is here to guide you. If you&apos;re unsure
               about joining midway, schedule a consultation to discuss your
               goals and determine the best entry point for your skill level.
             </li>

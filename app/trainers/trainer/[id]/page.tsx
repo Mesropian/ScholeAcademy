@@ -3,7 +3,6 @@ import React from "react";
 import { trainerCardProps } from "@/Types";
 import Image from "next/image";
 import RegisterForm from "@/Components/RegisterForm";
-import { usePathname ,redirect} from 'next/navigation'
 import Error from "@/Components/Error";
 
 
@@ -51,13 +50,16 @@ const trainers = [
   },
 ];
 function page ({ params }: IParamsTrainerDetails)  {
-  const currentPage = usePathname()
-  if (!trainers.find((e)=>e.id==+currentPage.split('/')[3])) {
-    return <Error/>
-  }
-  
-  
   const { id } = params;
+
+  const trainer = trainers.find((trainer) => trainer.id === parseInt(id));
+
+  if (!trainer) {
+    return <Error />;
+  }
+  console.log(trainers[id-1]);
+  
+  
   return (
     <div>
       <div className=" w-full h-[70px] bg-[#292929]"></div>
@@ -73,7 +75,7 @@ function page ({ params }: IParamsTrainerDetails)  {
           {trainers[id-1].course}
           </h3>
         </div>
-          <Image width={259} height={140} alt="trainer poster" src='/poster1.png' className=" hidden lg:inline-block"/>
+          <Image width={259} height={140} alt="trainer poster" src={trainers[id-1].image_path} className=" hidden lg:inline-block"/>
     </div>
 
           <div className="max-w-[574px] fontMontserrat text-xl capitalize flex flex-col gap-6 mt-6 lg:max-w-full lg:text-lg sm:text-sm">
@@ -96,7 +98,7 @@ function page ({ params }: IParamsTrainerDetails)  {
         </div>
         <div className="w-[600px] relative  lg:hidden">
          <Image width={992} height={1011} alt="Schole" src="/singlog.png" className=" absolute right-5 top-1"/>
-         <Image width={533} height={578} alt="trainer poster" src='/poster1.png' className=" absolute z-10  -bottom-[3px] right-0"/>
+         <Image width={533} height={578} alt="trainer poster" src={trainers[id-1].image_path} className=" absolute z-10  -bottom-[3px] right-0"/>
         </div>
 
         </div>

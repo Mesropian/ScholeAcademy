@@ -119,14 +119,14 @@ function page({ params }: IParamsCourseDetails) {
             {courseData?.courseName}
           </h1>
           <p className=" my-20 fontMontserrat text-black text-xl text-start">
-            If you are searching for a place to learn graphic design, you've
+            If you are searching for a place to learn graphic design, you&apos;ve
             found it! Graphic design remains one of the most sought-after and
             well-paid professions. Despite advancements in artificial
             intelligence, the demand for skilled graphic designers persists. The
             Graphic Design course offered by Schole Centre provides you with the
             essential skills and knowledge to establish yourself in the
-            profession and emerge .Throughout the ''Graphic Design with Narek
-            Manukyan'' course, you will cultivate your design thinking, master
+            profession and emerge .Throughout the Graphic Design with Narek
+            Manukyan course, you will cultivate your design thinking, master
             Adobe Photoshop and Adobe Illustrator programs, grasp color theory,
             create font compositions, and craft trendy collages and graphics.
             Each student, during the course, works on an individual branding
@@ -146,7 +146,7 @@ function page({ params }: IParamsCourseDetails) {
         </div>
         <div className="my-20">
           <p className="  fontMontserrat text-xl " >
-            If you are searching for a place to learn graphic design, you've
+            If you are searching for a place to learn graphic design, you&apos;ve
             found it! Graphic design remains one of the most sought-after and
             well-paid professions. Despite advancements in artificial
             intelligence, the demand for skilled graphic designers persists. The
