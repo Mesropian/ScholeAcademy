@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import { courseProps } from "@/Types";
-import Image from "next/image";
 import RegisterForm from "@/Components/RegisterForm";
-import { usePathname, redirect } from "next/navigation";
 import Error from "@/Components/Error";
 import Link from "next/link";
 
@@ -93,17 +91,13 @@ interface IParamsCourseDetails {
 }
 
 function page({ params }: IParamsCourseDetails) {
-  const currentPage = usePathname();
-  // console.log(coursePath);
-  if (!courses.find((e) => e.coursePath == currentPage.split("/")[2])) {
-    return <Error />;
-  }
   const { coursePath } = params;
 
-  const courseData = courses.find((e) => {
-    return e.coursePath == coursePath;
-  });
-  
+  const courseData = courses.find((course) => course.coursePath === coursePath);
+
+  if (!courseData) {
+    return <Error />;
+  }
   
   // console.log(courseData);
 

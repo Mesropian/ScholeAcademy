@@ -114,3 +114,5 @@ function page ({ params }: IParamsTrainerDetails)  {
   );
 };
 export default page;
+
+
