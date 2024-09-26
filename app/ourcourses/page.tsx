@@ -1,15 +1,12 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Course from "@/Components/Course";
 import RegisterForm from "@/Components/RegisterForm";
 
 function page() {
-  const [openFaq, setOpenFaq] = useState(false);
-  const handleOpenFaq = (): void => {
-    setOpenFaq(!openFaq);
-  };
+
   const ourCourses = [
     {
       courseName: "graphic design",
@@ -88,7 +85,6 @@ function page() {
     },
   ];
 
-  console.log(JSON.stringify(ourCourses,null,2));
   
 
   return (
@@ -143,13 +139,10 @@ function page() {
         <div className="container pt-16 pb-11 sm:pt-2 sm:pb-2">
           <h3
             className=" text-8xl  text-white fontBebas font-normal leading-normal uppercase text-center sm:text-3xl sm:relative"
-            onClick={handleOpenFaq}
           >
             join MIdway
             <span
-              className={`hidden sm:inline-block absolute duration-500 right-4 top-2 ${
-                openFaq ? "rotate-90" : "rotate-0"
-              } `}
+              className={`hidden sm:inline-block absolute duration-500 right-4 top-2 `}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -166,9 +159,7 @@ function page() {
             </span>
           </h3>
           <ul
-            className={`flex flex-col gap-7 duration-1000 sm:gap-2 sm:h-0 sm:!overflow-hidden ${
-              openFaq ? "sm:!h-auto" : "sm:!h-0"
-            }`}
+            className={`flex flex-col gap-7 duration-1000 sm:gap-2 sm:h-0 sm:!overflow-hidden `}
           >
             <li className=" fontMontserrat  sm:pt-5  text-white text-xl capitalize font-normal leading-[normal] sm:text-xs">
               Skip Introductory Content: If you&apos;re familiar with the basics, you
@@ -194,9 +185,7 @@ function page() {
             </li>
           </ul>
           <div
-            className={` text-center duration-1000 sm:h-0 sm:overflow-hidden ${
-              openFaq ? "sm:!h-auto" : "sm:!h-0"
-            }`}
+            className={` text-center duration-1000 sm:h-0 sm:overflow-hidden`}
           >
             <h5 className="uppercase fontBebas text-5xl font-normal leading-normal text-white mt-12 sm:text-3xl">
               get started
