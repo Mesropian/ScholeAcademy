@@ -124,8 +124,7 @@ left: -8px;
   position: relative;
 }
 
-.proj-item::after{
-  content: "Project Name";
+.proj-item_cover{
   position: absolute;
   top: 0;
   width: 100%;
@@ -141,6 +140,6 @@ left: -8px;
   transition: 500ms;
 }
 
-.proj-item:hover::after{
+.proj-item:hover>.proj-item_cover{
   opacity: 1;
 }

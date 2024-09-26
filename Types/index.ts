@@ -26,3 +26,10 @@ export interface courseProps{
   duration:number,
   price:number
 }
+
+export interface portfCardProps{
+  id:number,
+  name:string,
+  image?:string,
+  portf:string,
+}

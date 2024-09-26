@@ -157,7 +157,7 @@ export default function Home() {
           <span>ACADEMY</span>
         </div>
       </section>
-      <div className="container  h-[647px]  py-24 flex flex-col justify-between lg:h-auto">
+      <div className="container  h-[647px]  py-24 flex flex-col justify-between lg:h-auto select-none">
         <Swiper
           slidesPerView={3}
           spaceBetween={90}
